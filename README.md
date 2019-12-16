@@ -1,7 +1,6 @@
 # Dot Net
 ## Fetch random data from API + Deserialize JSON + Save to SQLServer using Entity Framework
 ```csharp
-
 class Program
 {
     static HttpClient client = new HttpClient();
@@ -36,5 +35,15 @@ class Program
         }
     }
 }
+```
+And app.config:
 
+```xml
+<configuration>
+  <connectionStrings>
+    <add name="MyDb"
+     connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=MyTestDb;Integrated Security=True;MultipleActiveResultSets=True"
+     providerName="System.Data.SqlClient" />
+  </connectionStrings>
+</configuration>
 ```
